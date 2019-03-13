@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        android:id="@+id/crdScoreCardView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MatchsListActivity"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+    android:padding="5dp">
+
+        <TextView
+                android:id="@+id/txtTeams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="India vs australia"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+        <TextView
+                android:id="@+id/txtTossDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="20sp"
+                android:text="Toss : India opt to bowl"
+        />
+        <TextView
+                android:id="@+id/txtVenue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:text="Venue : Nindra"
+        />
+        <TextView
+                android:id="@+id/txtUmpires"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:text="Umpires : Uma and Bala"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

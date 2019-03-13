@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        tools:context=".fragments.HomeFragment"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:orientation="vertical">
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="First innings"
+              android:textColor="@android:color/holo_red_dark"
+              android:layout_marginLeft="@dimen/dp10"
+    />
+
+    <include
+            android:id="@+id/scoreViewTeamA"
+            layout="@layout/score_view_layout"
+    />
+    <include
+            android:id="@+id/scoreViewTeamB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/score_view_layout"
+            android:visibility="gone"
+    />
+    <TextView
+            android:id="@+id/txtCurrentRunRate"
+            style="@style/txtScoreTeamTitle"
+            android:textSize="@dimen/subtitle"
+            android:text="CRR : 5.56"
+            android:textStyle="normal"
+    />
+
+    <LinearLayout style="@style/llBattingView"
+                  android:layout_marginTop="10dp">
+
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/batting"
+                  android:layout_weight="3"
+                  android:textStyle="bold"
+        />
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/runs"
+                  android:layout_weight="2"
+                  android:textStyle="bold"
+        />
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/fours"
+                  android:textStyle="bold"
+        />
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/sixes"
+                  android:textStyle="bold"
+        />
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/strikeRate"
+                  android:layout_weight="1.5"
+                  android:textStyle="bold"
+        />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recBattingTeamList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <LinearLayout style="@style/llBattingView"
+                  android:layout_marginTop="@dimen/dp40">
+
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/bowling"
+                  android:textStyle="bold"
+                  android:layout_weight="3.5"
+        />
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/overs"
+                  android:layout_weight="1.5"
+                  android:textStyle="bold"
+        />
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/bowlerRuns"
+                  android:textStyle="bold"
+        />
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/wickets"
+                  android:textStyle="bold"
+        />
+        <TextView style="@style/txtBatsmanScoreView"
+                  android:text="@string/economy"
+                  android:layout_weight="1.5"
+                  android:textStyle="bold"
+        />
+
+    </LinearLayout>
+    <LinearLayout style="@style/llBattingView"
+                  android:layout_marginTop="@dimen/dp5">
+
+        <TextView
+                android:id="@+id/txtBowlerName"
+                style="@style/txtBatsmanScoreView"
+                android:text="Bala subramanyam"
+                android:layout_weight="3.5"
+        />
+        <TextView
+                android:id="@+id/txtBowledOvers"
+                style="@style/txtBatsmanScoreView"
+                android:text="5.5"
+                android:layout_weight="1.5"
+        />
+        <TextView
+                android:id="@+id/txtRunsGiven"
+                style="@style/txtBatsmanScoreView"
+                android:text="45"
+        />
+        <TextView
+                android:id="@+id/txtwicketsTaken"
+                style="@style/txtBatsmanScoreView"
+                android:text="4"
+        />
+        <TextView
+                android:id="@+id/txtBowlerEconomy"
+                style="@style/txtBatsmanScoreView"
+                android:text="6.5"
+                android:layout_weight="1.5"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp15">
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recent_balls"
+                android:textSize="@dimen/subtitle"
+        />
+        <TextView
+                android:id="@+id/recentBalls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/normal"
+                android:textColor="@android:color/black"
+                android:text="2 3 0 W 1 2 | 6 4 6  0 0 0 | 0 0 0 0 0 0 "/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_runs_button_style">
+        <Button
+                android:id="@+id/btnOne"
+                style="@style/runsButton"
+                android:text="@string/one"/>
+        <Button
+                android:id="@+id/btnTwo"
+                style="@style/runsButton"
+                android:text="@string/two"/>
+        <Button
+                android:id="@+id/btnThree"
+                style="@style/runsButton"
+                android:text="@string/three"/>
+        <Button
+                android:id="@+id/btnLb"
+                style="@style/runsButton"
+                android:text="@string/lbyes"/>
+
+    </LinearLayout>
+    <LinearLayout style="@style/ll_runs_button_style">
+        <Button
+                android:id="@+id/btnFour"
+                style="@style/runsButton"
+                android:text="@string/four"/>
+        <Button
+                android:id="@+id/btnFive"
+                style="@style/runsButton"
+                android:text="@string/five"/>
+        <Button
+                android:id="@+id/btnSix"
+                style="@style/runsButton"
+                android:text="@string/six"/>
+        <Button
+                android:id="@+id/btnByes"
+                style="@style/runsButton"
+                android:text="@string/byes"/>
+
+    </LinearLayout>
+    <LinearLayout style="@style/ll_runs_button_style"
+    >
+        <Button
+                android:id="@+id/btnWide"
+                style="@style/runsButton"
+                android:text="@string/wide"/>
+        <Button
+                android:id="@+id/btnZero"
+                style="@style/runsButton"
+                android:text="@string/zero"/>
+        <Button
+                android:id="@+id/btnNb"
+                style="@style/runsButton"
+                android:text="@string/noBall"/>
+        <Button
+                android:id="@+id/btnOut"
+                style="@style/runsButton"
+                android:text="@string/out"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

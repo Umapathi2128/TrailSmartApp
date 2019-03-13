@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="batting" type="com.uma.trailsmartapp.models.Batsman"/>
+    </data>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+        <LinearLayout style="@style/llBattingView"
+                      android:layout_marginTop="5dp">
+
+            <TextView
+                    android:id="@+id/txtBatsmanName"
+                    style="@style/txtBatsmanScoreView"
+                    android:text="@{batting.name}"
+                    android:layout_weight="3"
+            />
+
+            <LinearLayout android:layout_width="@dimen/dp0"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_weight="2"
+                          android:gravity="center_vertical">
+                <TextView
+                        android:id="@+id/txtBatsmanRuns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/subtitle"
+                        android:text="@{batting.runs}"
+                />
+                <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:text="("
+                        android:textSize="@dimen/subtitle"
+                />
+                <TextView
+                        android:id="@+id/txtBatsmanBalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{batting.balls}"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/subtitle"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=")"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/subtitle"
+                />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/txtBatsmansFours"
+                    style="@style/txtBatsmanScoreView"
+                    android:text="@{batting.fours}"
+            />
+            <TextView
+                    android:id="@+id/txtBatsmanSixes"
+                    style="@style/txtBatsmanScoreView"
+                    android:text="@{batting.sixes}"
+            />
+            <TextView
+                    android:id="@+id/txtBatsmanStrikeRate"
+                    style="@style/txtBatsmanScoreView"
+                    android:text="@{batting.strieRate}"
+                    android:layout_weight="1.5"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Trail Smart App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="batting">Batting</string>
+    <string name="runs">R(B)</string>
+    <string name="fours">4s</string>
+    <string name="sixes">6s</string>
+    <string name="strikeRate">SR</string>
+
+    <string name="bowling">Bowling</string>
+    <string name="overs">O</string>
+    <string name="bowlerRuns">R</string>
+    <string name="wickets">W</string>
+    <string name="economy">E</string>
+    <string name="recent_balls">Recent balls : </string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="zero">0</string>
+    <string name="lbyes">lb</string>
+    <string name="byes">byes</string>
+    <string name="out">out</string>
+    <string name="wide">Wd</string>
+    <string name="noBall">Nb</string>
+    <string name="braces">(</string>
+    <string name="braces2">)</string>
+
+</resources>
